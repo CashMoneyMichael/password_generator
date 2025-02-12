@@ -26,18 +26,27 @@ def fetch_word():
     return word
 
 
-def replaceLetter():
+def replaceLetters(word):
     word = word[0].upper() + word[1:]
 
     if "a" in word:
         word = word.replace("a", "@")
 
+    if "i" in word:
+        word = word.replace("i", "!")
+
+    if "e" in word:
+        word = word.replace("e", "3")
+    
     return word
+
 
 
 def generate_weaker_password():
     word1 = fetch_word()
     word2 = fetch_word()
+    word1 = replaceLetters(word1)
+    word2 = replaceLetters(word2)
     password = word1 + word2
     return password
 
