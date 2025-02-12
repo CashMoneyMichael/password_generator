@@ -38,6 +38,9 @@ def replaceLetters(word):
     if "e" in word:
         word = word.replace("e", "3")
     
+    if "s" in word:
+        word = word.replace("s", "$")
+        
     return word
 
 
